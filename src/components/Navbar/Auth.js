@@ -23,14 +23,41 @@ function Auth() {
               <Icon name="downIcon" size={16} />
             </span>
           </Menu.Button>
-          <Menu.Items className="absolute top-full right-0 w-48 bg-active rounded translate-y-2">
+          <Menu.Items className=" flex flex-col absolute top-full right-0 w-48 bg-active rounded translate-y-2 ">
             <Menu.Item>
-              {({ open }) => (
+              {({ active }) => (
                 <a
-                  className={`${open && "bg-blue-500"}`}
+                  className={` h-10 flex justify-between items-center px-2 text-sm rounded ${
+                    active && "bg-white bg-opacity-10"
+                  } `}
+                  href=""
+                >
+                  Account
+                  <Icon name="external" size={16} />
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={` h-10 flex items-center px-2 text-sm ${
+                    active && "bg-white bg-opacity-10"
+                  } `}
                   href="/account-settings"
                 >
-                  Account settings
+                  Profile
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  className={` h-10 flex items-center px-2 text-sm ${
+                    active && "bg-white bg-opacity-20"
+                  } `}
+                  href="/account-settings"
+                >
+                  Log Out
                 </a>
               )}
             </Menu.Item>
