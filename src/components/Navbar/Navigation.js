@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../../Icons";
 import { useNavigate } from "react-router-dom";
+import NavSearch from "./NavSearch";
 function Navigation() {
   const navigate = useNavigate();
   return (
@@ -17,6 +18,7 @@ function Navigation() {
       >
         <Icon size={22} name="next" />
       </button>
+      <NavSearch/>
     </nav>
   );
 }

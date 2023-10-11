@@ -1,7 +1,18 @@
 import React from "react";
-
-function Search() {
-  return <div>Search page</div>;
+import categories from "../../data/categories"
+function Category({category}) {
+  return(
+    <div style={{'background': category.color}}>
+      {category.title}
+    </div>
+  )
 }
 
-export default Search;
+
+ function Search() {
+  return <div className="grid grid-cols-5">
+    {categories.map((category)=>  <Category category={category}/>)}
+  </div>;
+}
+
+ export default Search
